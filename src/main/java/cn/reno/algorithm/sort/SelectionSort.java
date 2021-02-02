@@ -25,6 +25,7 @@ public class SelectionSort extends BasicSort {
     public  static  void main(String[] args){
         Scanner scanner=new Scanner(System.in);
         String str=scanner.nextLine();
+
         String[] strings = str.split(",");
         sort(strings);
         assert  isSorted(strings);
