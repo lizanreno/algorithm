@@ -3,6 +3,9 @@ package cn.reno.algorithm.sort;
 
 import java.util.Scanner;
 
+/**
+ * @Author Lizan
+ */
 public class BasicSort {
     public static boolean less(Comparable v, Comparable w){
         return v.compareTo(w) < 0;
@@ -30,14 +33,9 @@ public class BasicSort {
         return true;
     }
 
-    public static void sort(Comparable[] a){}
-
-    public  static  void main(String[] args){
+    public static String[] getSortLine() {
         Scanner scanner=new Scanner(System.in);
         String str=scanner.nextLine();
-        String[] strings = str.split(",");
-        sort(strings);
-        assert  isSorted(strings);
-        show(strings);
+        return str.split(",");
     }
 }

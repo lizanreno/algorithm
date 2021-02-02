@@ -2,33 +2,33 @@ package cn.reno.algorithm.sort;
 
 import java.util.Scanner;
 
+/**
+ * @Author lizan
+ * @Description 选择排序 找到最小元素和第一未排序元素交换
+ */
 public class SelectionSort extends BasicSort {
 
     public static void sort(Comparable[] a){
-        boolean isexch = false;
-        for(int i = 0; i < a.length ; i++){
+        for(int i = 0; i < a.length - 1; i++){
             int min = i;
             for(int j = i + 1; j < a.length; j++){
-                if(less(a[j ], a[min])) {
+                if(less(a[j],a[min])){
                     min = j;
-                    isexch = true;
                 }
             }
-            if(isexch){
                 exch(a,i,min);
-                isexch = false;
-            }
+                show(a);
 
         }
     }
 
-    public  static  void main(String[] args){
-        Scanner scanner=new Scanner(System.in);
-        String str=scanner.nextLine();
-
-        String[] strings = str.split(",");
+    public static void assertSort() {
+        String[] strings = getSortLine();
         sort(strings);
         assert  isSorted(strings);
-        show(strings);
+    }
+
+    public  static  void main(String[] args){
+        assertSort();
     }
 }
