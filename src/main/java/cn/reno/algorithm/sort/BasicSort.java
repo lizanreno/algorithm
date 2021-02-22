@@ -38,4 +38,6 @@ public class BasicSort {
         String str=scanner.nextLine();
         return str.split(",");
     }
+
+
 }
